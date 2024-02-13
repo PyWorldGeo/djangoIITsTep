@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <h1>Welcome {{ user.username }}!</h1>
+    {% else %}
+        <h1> Welcome!</h1>
+    {% endif %}
+
+
+
+    {% for feature in features %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ feature.name }}</h5>
+            <p class="card-text">{{ feature.details }}</p>
+
+            <a href="#" class="btn btn-primary">{{ feature.visible }}</a>
+
+          </div>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

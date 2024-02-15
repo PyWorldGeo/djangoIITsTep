@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="profile">
+     <h1>Welcome {{ user.username }}!</h1>
+
+
+
+     <h1>Change Password:</h1>
+    <form method="POST">
+        {% csrf_token %}
+
+        {% for message in messages %}
+            <h3> {{ message }} </h3>
+        {% endfor %}
+
+
+        <h3>Old Password:</h3>
+        <input type="password" name="old_password">
+        <h3>New Password:</h3>
+        <input type="password" name="password1">
+        <h3>Repeat New Password:</h3>
+        <input type="password" name="password2"><br>
+        <input type="submit">
+    </form>
+
+</div>
+
+
+{% endblock %}

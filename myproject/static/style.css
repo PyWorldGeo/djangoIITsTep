@@ -1,3 +1,68 @@
+body {
+    background-color: red;
+}
+
+.navbar-nav {
+    font-size: 20px;
+}
+
+
+.card {
+    width: 30vw;
+    margin: 50px 1vw;
+    display: inline-block;
+    color: white;
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+@media (max-width: 990px) {
+    .card {
+    width: 90vw;
+    margin: 50px 5vw;
+}
+
+
+}
+
 h1 {
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#addHero {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+form input{
+    display: block;
+    margin: auto;
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+#add {
+    margin-top: 20px;
+    width: 100px;
+    background-color: white;
     color: black;
+}
+
+#profile {
+    text-align: center;
+}
+
+#register {
+    text-align: center;
+}
+
+#login {
+    text-align: center;
 }

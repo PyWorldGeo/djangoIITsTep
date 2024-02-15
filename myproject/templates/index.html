@@ -2,23 +2,27 @@
 
 {% block content %}
 
-    {% if user.is_authenticated %}
-        <h1>Welcome {{ user.username }}!</h1>
-    {% else %}
-        <h1> Welcome!</h1>
-    {% endif %}
+{% if user.is_authenticated %}
+<h2>Add New Fighter:</h2>
+<form id="addHero" action ="" method = "post">
+    {% csrf_token %}
+    {{ addhero.form}}
+    <br>
+    <input id="add" type="submit" value="Add">
+</form>
 
 
 
+{% endif %}
+    <h1>Choose Your Fighter:</h1>
     {% for feature in features %}
 
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+    <div class="card">
+        <img src="static/images/{{feature.img_url}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ feature.name }}</h5>
             <p class="card-text">{{ feature.details }}</p>
-
-            <a href="#" class="btn btn-primary">{{ feature.visible }}</a>
+            <a href="#" class="btn btn-warning">Choose Fighter</a>
 
           </div>
     </div>
